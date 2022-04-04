@@ -26,7 +26,7 @@ pipeline {
     stage('Sonar Analysis') 
     {
           steps {
-           withSonarQubEEnv('ZensarCodeAnalysis'){
+           withSonarQubeEnv('ZensarCodeAnalysis'){
             bat 'mvn sonar:sonar'
            }
          }
