@@ -15,7 +15,7 @@ pipeline {
      stage('Package') 
      {
            steps {
-                 bat 'mvn clean package'
+                 mvn clean package
            }
      }
    stage('JaCoCo Report') 
