@@ -40,13 +40,14 @@ pipeline {
     stage('Build Docker Image') 
     {
           steps {
-                 echo 'Building Docker Image'
+                bat 'docker build -t vjaddepalli/test .'
          }
     }
     stage('Push Docker Image to Docker Hub') 
     {
           steps {
-                 echo 'Pushing Docker Image'
+                 bat 'docker login -u username -p password'
+                 bat 'docker push vjaddepalli/test'
          }
     }
   }
